@@ -1,0 +1,1 @@
+from .generic_v1 import PersonalListApiView, PersonalDetailAPIView

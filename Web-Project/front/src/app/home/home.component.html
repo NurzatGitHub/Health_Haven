@@ -1,0 +1,43 @@
+    <div class="post">
+        <div class="post-header">
+            <div class="header" *ngIf="userData">
+                <img src="https://images.satu.kz/174951798_w293_h242_bad-solgar-omega.jpg">
+            </div>
+            <div>
+                <a class="header-text" href="https://health-and-hair.kz/p95719589-bad-solgar-omega.html">БАД Solgar Omega 3 100 капсул</a>
+            </div>
+
+        </div>
+        <div>
+            <fieldset>
+                <div class="container" *ngIf="userData">
+                    <p>Username: {{ userData.username }}</p>
+                </div>
+                <input type="text" class="input-text" [(ngModel)]="body" placeholder="Comment">
+                <button (click)="addCategory()" class="button">send</button>
+            </fieldset>
+        </div>
+        <div>
+            <ul *ngIf="loaded; else loading">
+                <li *ngFor="let c of personaldataset">
+                    <p>{{c.author}} - {{c.body}}</p>    
+                    <!-- <button (click)="deleteCompany(c.id)">Delete</button> -->
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+<ng-template #loading>
+    <p>Loading</p>
+</ng-template>
+<!-- <div class="post">
+    <div class="post-header">
+        <div class="header" *ngIf="userData">
+            <p class="header-text">{{ userData.username }} {{ userData.last_name }}</p>
+        </div>
+        <div>
+            <img class="header-image" src="https://scontent.cdninstagram.com/v/t39.30808-6/421951225_18432355696034763_7859726781791617121_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMzMyeDEzMzIuc2RyLmYzMDgwOCJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=103&_nc_ohc=p-R2BEcomUEQ7kNvgG7jE03&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzM1NzQzNDQ4Mjg5NTM4NjMyMw%3D%3D.2-ccb7-5&oh=00_AfCxb3DQ4uiJ1Eq5ti43nV6Z8JL1kspEx-OpAkWl1d0EGA&oe=663A4300&_nc_sid=10d13b">
+        </div>
+    </div>
+</div> -->

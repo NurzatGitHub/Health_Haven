@@ -1,0 +1,137 @@
+<ng-container *ngIf="!logged && !signed">
+  
+  <div class="Logo">
+
+  </div>
+  <hr size="5px">
+  <fieldset>
+    <label for="username">Username: </label>
+    <input type="text" id="username" [(ngModel)]="username">
+  </fieldset>
+  
+  <fieldset>
+    <label for="password">Password: </label>
+    <input type="password" id="password" [(ngModel)]="password">
+  </fieldset>
+  
+  <div>
+    <button (click)="login()">Login</button>
+    <button (click)="signup()">Sign Up</button>
+  </div>
+</ng-container>
+
+
+
+
+
+
+<ng-container *ngIf="signed">
+  <div class="Logo">
+
+  </div>
+  <hr size="5px">
+  <div class="main-signup">
+      <div class="data-register">
+
+        <fieldset>
+          <label for="signupName">Name </label>
+          <input type="text" id="signupName" [(ngModel)]="signupName">
+        </fieldset>
+
+        <fieldset>
+          <label for="signupSurename">Surename </label>
+          <input type="text" id="signupSurename" [(ngModel)]="signupSurename">
+        </fieldset>
+
+      </div>
+
+
+      <div class="data-register">
+
+        <fieldset>
+          <label for="signupEmail">Email </label>
+          <input type="email" id="signupEmail" [(ngModel)]="signupEmail">
+        </fieldset>
+
+        <fieldset>
+          <label for="signupPhonenumber">Phone Number </label>
+          <input type="number" id="signupPhonenumber" [(ngModel)]="signupPhonenumber">
+        </fieldset>
+
+      </div>
+
+
+      <div class="data-register">
+
+        <fieldset>
+          <label for="signupDatabirthday">Data Birthday </label>
+          <input type="date" id="signupDatabirthday" [(ngModel)]="signupDatabirthday">
+        </fieldset>
+
+        <fieldset>
+          <label for="signupGender">Gender </label>
+
+          <div class="box">
+            <div>
+              <input tabindex="4" checked type="radio" name="gender" value="male" /> Male     
+            </div>
+            <div>
+              <input tabindex="4" checked type="radio" name="gender" value="female" /> Female
+            </div>
+          </div>
+
+        </fieldset>
+
+      </div>
+
+
+      <div class="data-register">
+
+        <fieldset>
+          <label for="signupPassword">Password </label>
+          <input type="password" id="signupPassword" [(ngModel)]="signupPassword">
+        </fieldset>
+
+        <fieldset>
+          <label for="signupPasswordagain">Password Again </label>
+          <input type="password" id="signupPasswordagain" [(ngModel)]="signupPasswordagain">
+        </fieldset>
+
+      </div>
+
+      <div class="button">
+
+        <button (click)="register()">Sign Up</button>
+        <button (click)="comeback()">Login</button>
+      </div>
+    </div>
+  </ng-container>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Menu -->
+<ng-container *ngIf="logged">
+<div class="container">
+
+  <div class="block-in-container">
+    <div class="box">
+      <a class="text-in-container" [routerLink]="['/home']">Home</a>
+      <a class="text-in-container" [routerLink]="['/chat']">Chat</a>
+      <a class="text-in-container" [routerLink]="['/personal-account']">Personal Account</a>   
+    </div>
+    <!-- <button class="text-in-container-logout" (click)="logout()">Logout</button> -->
+
+    <a class="text-in-container-logout" href="#" (click)="logout()">Logout</a>
+
+  </div>
+</div>
+<router-outlet />
+</ng-container>

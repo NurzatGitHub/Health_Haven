@@ -1,0 +1,31 @@
+* {
+    text-decoration: none;
+    
+}
+
+body {
+    display: flex;
+    align-items: stretch; 
+    margin: auto;
+    justify-content: center;
+    max-width: 900px; /* Example value */
+    width: 100%;
+    height: 100%;
+    background-image: url('./fon2.jpg');
+    /* background: #353738; */
+    background-size: cover; /* Изменено на cover */
+    /* background-repeat: no-repeat; Изменено на no-repeat */
+    
+}
+
+.asd {
+    display: flex;
+    height: 600px ;
+    margin-top: 10px;
+    border: 1px solid lightgray;
+    box-shadow: 25px 25px 5px -5px rgba(0,0,0,.2);
+    background-color: white;
+    /* background-image: url("https://www.newcap.com/wp-content/uploads/2019/03/AdobeStock_137665327-min.jpg"); */
+    border-radius: 5%;
+}
+

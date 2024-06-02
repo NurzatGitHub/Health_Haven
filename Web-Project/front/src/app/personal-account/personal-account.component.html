@@ -1,0 +1,74 @@
+<!-- <p>personal-account works!</p> -->
+<!-- <div class="accout">
+    
+    <div class="head" >
+        <h1>Личные данные</h1>
+        <button>Изменить</button>
+    </div>
+
+    <div class="main">
+        <div class="box1">
+            <div class="profile-img"></div>
+
+        </div>
+        <div class="box2">
+            <ul>
+                <li *ngFor="let data of personalData">
+                    <strong>ФИО:</strong> {{ data.full_name }}<br>
+                    <strong>Дата рождения:</strong> {{ data.date_of_birth }}<br>
+                    <strong>Группа крови:</strong> {{ data.blood_group }}<br>
+                    <strong>Диагноз:</strong> {{ data.diagnosis }}<br>
+                    <strong>Наличие аллергий:</strong> {{ data.allergies }}<br>
+                    <strong>Противопоказания:</strong> {{ data.contraindications }}<br>
+                    <strong>Контактный номер опекуна:</strong> {{ data.guardian_contact }}<br>
+                <strong>Прикреплён к:</strong> {{ data.hospital }}<br>
+                </li>
+            </ul>  
+        </div>
+    </div>
+</div> -->
+
+<div class="container" *ngIf="userData">
+  <div class="user-info">
+    <p>Username: {{ userData.username }}</p>
+    <p>Email: {{ userData.email }}</p>
+    <p>Last name: {{ userData.last_name }}</p>
+  </div>
+
+  <ul class="list">
+      <li class="list-item" *ngFor="let c of personaldataset">
+        <strong>Контактный номер опекуна:</strong> {{c.phone_number}}   <img src="{{c.image}}" alt="Photo">
+      </li>
+    </ul>
+
+  <fieldset class="form-container">
+    <input type="text" [(ngModel)]="phone_number" class="input-text" placeholder="Enter phone number">
+    <div class="file-input">
+      <label class="button" for="photoInput">Upload Photo</label>
+      <input type="file" id="photoInput" (change)="onFileSelected($event)">
+    </div>
+    <button class="button" (click)="addPersonaldata()">Add Personal Data</button>
+  </fieldset>
+  
+</div>
+
+
+<!-- 
+<div *ngIf="userData">
+    <h2>Личный кабинет</h2>
+    <form (ngSubmit)="updatePersonalData()" #userDataForm="ngForm">
+      <div class="form-group">
+        <label for="name">Имя</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="userData.full_name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="userData.email" required>
+      </div>
+      <div class="form-group">
+        <label for="last_name">last_name</label>
+        <input type="text" class="form-control" id="last_name" name="last_name" [(ngModel)]="userData.last_name" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Обновить данные</button>
+    </form>
+  </div> -->

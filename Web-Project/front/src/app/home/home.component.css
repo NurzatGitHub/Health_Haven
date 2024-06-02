@@ -1,0 +1,45 @@
+.post {
+    width: 50%;
+    height: 50%;
+}
+
+
+.header-text {
+    font-size: 10px;
+    margin-right: 10px; /* добавим небольшой отступ между текстом и изображением */
+}
+
+.header-image {
+    margin: 0px;
+    width: 50px; /* установим фиксированную ширину для изображения */
+    height: auto; /* чтобы сохранить соотношение сторон */
+}
+
+
+.header {
+    width: 100%;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* изменено на justify-content: center; */
+}
+
+.header-image {
+    margin: auto; /* добавлено для центрирования изображения */
+    width: 50px;
+    height: auto;
+}
+
+.header-text {
+    display: block;
+    color: #333;
+    margin: auto;
+    font: 15px/18px Arial,Helvetica,Sans-Serif;
+    size: 10px;
+}
+
+.header-image {
+    padding: 10px;
+    width: 90%;
+    height: 400px;
+}

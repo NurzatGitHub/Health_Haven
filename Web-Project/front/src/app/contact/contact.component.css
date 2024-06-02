@@ -1,0 +1,21 @@
+
+.box{
+    width: 591px;
+    margin: 10px;
+    display: block;
+}
+h1{
+    font-size: 30px;
+    margin-bottom: 0;
+}
+p{
+    padding-left: 70px;
+    margin: 0;
+}
+a{
+    transition: all 0.3s ease;
+}
+a:hover{
+    font-size: 20px;
+    color: red;
+}
